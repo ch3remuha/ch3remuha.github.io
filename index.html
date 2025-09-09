@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка со звуком</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img.jpg" onclick="playSound()" alt="Кнопка со звуком">
+    
+    <audio id="sound">
+        <source src="s.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playSound() {
+            document.getElementById('sound').play();
+        }
+    </script>
+</body>
+</html>
